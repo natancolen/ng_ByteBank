@@ -18,10 +18,10 @@ export class NovaTransferenciaComponent{
 
         this.aoTransferir.emit(valorEmitir);
 
-        this.limpar();
+        this.limparCampo();
     }
 
-    limpar() {
+    limparCampo() {
         this.valor = 0;
         this.destino = 0
     }
