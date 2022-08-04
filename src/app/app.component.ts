@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ByteBank';
   transferencia: any
 
-  transferir($event: any) {
+  transferir($event: Event) {
     this.transferencia = $event;
   }
 }
