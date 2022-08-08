@@ -8,12 +8,13 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 
 import localePT from '@angular/common/locales/pt';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localePT, 'pt');
 
 @NgModule({
   declarations: [ AppComponent, NovaTransferenciaComponent, ExtratoComponent ],
-  imports: [ BrowserModule, FormsModule ],
+  imports: [ BrowserModule, FormsModule, HttpClientModule ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     {
