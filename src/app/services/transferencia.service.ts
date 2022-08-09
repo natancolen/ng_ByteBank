@@ -21,12 +21,6 @@ export class TransferenciaService {
   todas(): Observable<Transferencia[]> {
     return this.httpClient.get<Transferencia[]>(this.url);
   }
-<<<<<<< HEAD
-=======
-
-  adicionar(transferencia: any) {
-    this.hidratar(transferencia);
->>>>>>> 391a31f2ddb373a19d4bf6fd1ed37f409205bc92
 
   adicionar(transferencia: any): Observable<Transferencia> {
     this.hidratar(transferencia);
