@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Transferencia } from './../models/transferencia.model';
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
@@ -8,9 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class TransferenciaService {
   private listaTransferencia: any[];
-  private url = 'http://localhost:3000/transferencias';
+  private url = environment.URL;
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient) {
     this.listaTransferencia = [];
   }
 
@@ -24,7 +25,7 @@ export class TransferenciaService {
 
   adicionar(transferencia: any): Observable<Transferencia> {
     this.hidratar(transferencia);
-    
+
     return this.httpClient.post<Transferencia>(this.url, transferencia);
   }
 
